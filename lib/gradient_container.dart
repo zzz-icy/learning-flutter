@@ -19,7 +19,9 @@ class GradientContainer extends StatelessWidget {
 // to tell Dart that this in the end is a class that can be optimized
 // constructor function
 //make sure that key value, which is wanted by the parent class is forwarded correctly
-  const GradientContainer({super.key});
+  const GradientContainer({super.key, required this.colors});
+
+  final List<Color> colors;
 
   @override
   //you can simply think of context as a metadata object that contains some useful information about this widget
@@ -27,10 +29,8 @@ class GradientContainer extends StatelessWidget {
   Widget build(context) {
     return Container(
       decoration: BoxDecoration(
-        gradient: LinearGradient(colors: const [
-          Color.fromARGB(255, 26, 2, 80),
-          Color.fromARGB(255, 23, 6, 47)
-        ], begin: startAlignment, end: endAlignment),
+        gradient: LinearGradient(
+            colors: colors, begin: startAlignment, end: endAlignment),
       ),
       child: const Center(
         child: StyledText('Hello World!'),
