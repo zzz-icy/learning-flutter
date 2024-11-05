@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:my_first_flutter_app/styled_text.dart';
 
+// Alignment? startAlignment;
 var startAlignment = Alignment.topLeft;
 var endAlignment = Alignment.bottomRight;
 
+// with the following, we can now add const to BoxDecoration
+// const startAlignment = Alignment.topLeft;
+// const endAlignment = Alignment.bottomRight;
+
+// final
+// final startAlignment =getStartAlignment()
+
+// const compiled time constant
 class GradientContainer extends StatelessWidget {
 // When defining your own classes with your own constructor functions
 // you often can add const in front of them
